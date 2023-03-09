@@ -7,7 +7,11 @@
     "build": "tsc",
     "lint": "eslint ./src --ext .ts --config package.json",
     "start": "npm run build && node dist/index",
-    "watch": "nodemon src/index.ts"
+    "watch": "nodemon src/index.ts",
+    "deploy": "gcloud run deploy fastify-api-[name] --image gcr.io/gcp-competence-group/fastify-api:latest --platform managed --region europe-central2",
+    "docker:build": "docker build -t fastify-api .",
+    "docker:tag": "docker tag fastify-api-[name] gcr.io/gcp-competence-group/fastify-api-[name]",
+    "docker:push": "docker push gcr.io/gcp-competence-group/fastify-api-[name]"
   },
   "repository": {
     "type": "git",
@@ -30,7 +34,8 @@
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "eslint": "^8.33.0",
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "ts-node": "^10.9.1"
   },
   "eslintConfig": {
     "env": {
