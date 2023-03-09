@@ -1,0 +1,56 @@
+{
+  "name": "gcp-cg-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint ./src --ext .ts --config package.json",
+    "start": "npm run build && node dist/index",
+    "watch": "nodemon src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domengabrovsek/gcp-cg-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domengabrovsek/gcp-cg-example/issues"
+  },
+  "homepage": "https://github.com/domengabrovsek/gcp-cg-example#readme",
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "@fastify/helmet": "^10.1.0",
+    "fastify": "^4.14.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "nodemon": "^2.0.21"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "no-console": "off"
+    }
+  }
+}
