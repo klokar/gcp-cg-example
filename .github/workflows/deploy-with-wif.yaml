@@ -1,7 +1,7 @@
 name: Deployment workflow with WIF
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
