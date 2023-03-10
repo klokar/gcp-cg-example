@@ -8,22 +8,22 @@
     "lint": "eslint ./src --ext .ts --config package.json",
     "start": "npm run build && node dist/index",
     "watch": "nodemon src/index.ts",
-    "deploy": "gcloud run deploy fastify-api-domen --image gcr.io/gcp-competence-group/fastify-api-domen:latest --platform managed --region europe-central2",
-    "docker:build": "docker build -t fastify-api-domen .",
-    "docker:tag": "docker tag fastify-api-domen gcr.io/gcp-competence-group/fastify-api-domen",
-    "docker:push": "docker push gcr.io/gcp-competence-group/fastify-api-domen"
+    "deploy": "gcloud run deploy fastify-api-klemen --image gcr.io/gcp-competence-group/fastify-api-klemen:latest --platform managed --region europe-central2",
+    "docker:build": "docker build -t fastify-api-klemen .",
+    "docker:tag": "docker tag fastify-api-klemen gcr.io/gcp-competence-group/fastify-api-klemen",
+    "docker:push": "docker push gcr.io/gcp-competence-group/fastify-api-klemen"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/domengabrovsek/gcp-cg-example.git"
+    "url": "git+https://github.com/klokar/gcp-cg-example.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/domengabrovsek/gcp-cg-example/issues"
+    "url": "https://github.com/klokar/gcp-cg-example/issues"
   },
-  "homepage": "https://github.com/domengabrovsek/gcp-cg-example#readme",
+  "homepage": "https://github.com/klokar/gcp-cg-example#readme",
   "dependencies": {
     "@fastify/cors": "^8.2.0",
     "@fastify/helmet": "^10.1.0",
