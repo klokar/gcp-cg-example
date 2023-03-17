@@ -20,13 +20,13 @@ jobs:
         with:
           token_format: access_token # can also get id-token to use for authorization
           # Which provider to use for SA impersonation (projects/<gcp-project-number>/locations/global/workloadIdentityPools/<my-pool-name>/providers/<my-provider>)
-          workload_identity_provider: projects/388639942010/locations/global/workloadIdentityPools/github-actions-test/providers/gha-test
+          workload_identity_provider: projects/388639942010/locations/global/workloadIdentityPools/github-pool/providers/github-provider
           # Which SA to impersonate (aka login as)
-          service_account: github-actions@gcp-competence-group.iam.gserviceaccount.com
+          service_account: gh-actions-klemen@gcp-competence-group.iam.gserviceaccount.com
 
       # Install gcloud, `setup-gcloud` automatically picks up authentication from `auth`.
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Deploy Cloud Run
-        run: gcloud run deploy fastify-api-domen --image gcr.io/gcp-competence-group/fastify-api-domen:latest --platform managed --region europe-central2
+        run: gcloud run deploy fastify-api-klemen --image gcr.io/gcp-competence-group/fastify-api-klemen:latest --platform managed --region europe-central2
